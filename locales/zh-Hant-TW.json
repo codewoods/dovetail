@@ -1,0 +1,100 @@
+{
+	"status": {
+		"unknown": "未確認",
+		"evacuated_shelter": "撤離至避難收容處所",
+		"evacuated_relatives": "依親",
+		"vertical_evacuated": "垂直避難",
+		"refused": "拒絕撤離",
+		"rescue_needed": "需要救援",
+		"self_evacuated_neighbor": "鄰居代報已自行離開",
+		"address_lost": "原址消失"
+	},
+	"person_flag": {
+		"injured": "受傷",
+		"special_needs": "避難支援需求",
+		"long_term_care": "長照個案",
+		"trapped": "受困",
+		"non_resident": "非設籍當地",
+		"foreign_visitor": "外籍訪客",
+		"migrant_worker": "外籍移工",
+		"status_changed": "狀態再次變化",
+		"on_site": "現場通報",
+		"vertical_evacuation": "垂直避難已確認",
+		"no_fixed_address": "無固定住所",
+		"gnss_degraded": "GNSS 訊號異常",
+		"requires_separated_space": "區隔空間需求",
+		"consent_acknowledged": "同意被通報",
+		"consent_refused": "拒絕被通報"
+	},
+	"terrain_event": {
+		"road_blocked": "道路阻斷",
+		"bridge_collapsed": "橋梁崩塌",
+		"landslide": "土石流",
+		"flood": "淹水",
+		"building_collapse": "建物倒塌",
+		"fire": "火災",
+		"river_diverted": "河道改道",
+		"power_outage_area": "區域停電",
+		"signal_lost": "訊號失聯",
+		"water_color_change": "水變色",
+		"mountain_rumbling": "山鳴",
+		"sudden_animal_behavior": "動物行為異常",
+		"ground_cracking": "地面龜裂",
+		"unusual_smell": "氣味異常",
+		"drainage_backflow": "排水回堵壅高"
+	},
+	"terrain_flag": {
+		"rapid_rainfall": "短延時強降雨",
+		"only_exit_control": "道路只出不進",
+		"vehicles_trapped": "車輛或人員暫時受困",
+		"backflow_observed": "已觀察到水流回堵或倒灌"
+	},
+	"resource": {
+		"vehicle_transport": "交通工具",
+		"shelter_space": "收容空間",
+		"power_generator": "發電設備",
+		"medical_aid": "醫療協助",
+		"food_water": "食物飲水",
+		"communication": "通訊設備",
+		"fuel": "燃料",
+		"manpower": "人力協助",
+		"warmth_supplies": "保暖物資",
+		"menstrual_supplies": "生理用品"
+	},
+	"resource_flag": {
+		"is_request": "請求資源",
+		"urgent": "緊急"
+	},
+	"queue": {
+		"event_queue": "事件佇列",
+		"cluster_count": "事件群組",
+		"packet_count": "封包數",
+		"latest_time": "最新回報",
+		"highest_severity": "最高顯示權重",
+		"queued": "優先檢視",
+		"watch": "觀察"
+	},
+	"severity_bands": ["低", "中", "高", "最高"],
+	"severity_scale": [
+		{
+			"label": "低",
+			"range": [0, 0],
+			"passability": "通行無影響, 訊號記錄用"
+		},
+		{
+			"label": "中",
+			"range": [1, 127],
+			"passability": "民眾車輛應繞行; 行人 / 4WD 可通行撤離"
+		},
+		{
+			"label": "高",
+			"range": [128, 191],
+			"passability": "一般車輛不可; 工程 / 4WD / 救災可進"
+		},
+		{
+			"label": "最高",
+			"range": [192, 255],
+			"passability": "民眾工程不可; 救災通行視現場判斷"
+		}
+	]
+}

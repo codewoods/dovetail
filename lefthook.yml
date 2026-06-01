@@ -1,0 +1,30 @@
+pre-commit:
+  parallel: true
+  commands:
+    format:
+      glob: "*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc,md}"
+      run: bunx @biomejs/biome check --linter-enabled=false --no-errors-on-unmatched --write {staged_files}
+      stage_fixed: true
+    js-lint:
+      glob: "*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx}"
+      run: bunx oxlint {staged_files}
+    #style-lint:
+      #glob: "*.{css,scss}"
+      #run: bunx stylelint --allow-empty-input {staged_files}
+    #docs-lint:
+      #glob: "*.md"
+      #run: vale {staged_files}
+    name-lint:
+      run: make lint-names
+    secrets:
+      run: make lint-secrets
+
+commit-msg:
+  commands:
+    commitlint:
+      run: bunx commitlint --edit {1}
+
+pre-push:
+  commands:
+    static-layer:
+      run: make pre-push

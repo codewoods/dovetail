@@ -1,0 +1,23 @@
+ls:
+  .js: kebab-case
+  .ts: kebab-case | camelCase | PascalCase
+  .md: kebab-case
+  .json: kebab-case
+  .yml: kebab-case
+  .yaml: kebab-case
+
+ignore:
+  - node_modules
+  - .git
+  - data/processed
+  - news
+  - AGENTS.md
+  - CLAUDE.md
+  - LIMITATIONS.md
+  - NOTES.md
+  - PERSONA.md
+  - README.md
+  - SPEC.md
+  - data/docs/SOURCES.md
+  - firmware/README.md
+  - locales/zh-TW.json

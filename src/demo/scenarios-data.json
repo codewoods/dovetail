@@ -1,0 +1,185 @@
+[
+	{
+		"id": "shelter-capacity-synthetic",
+		"label": "Synthetic 情境一 收容容量與後勤需求",
+		"description": "以 public reference coordinates 上的 synthetic reports 展示收容容量、食水與照護人力需求；非真實個案位置。",
+		"source": "Synthetic scenario",
+		"location_policy": "public_reference_coordinates",
+		"occurred_at_utc": "2025-09-23T06:50:00Z",
+		"display_timezone": "Asia/Taipei",
+		"packets": [
+			{
+				"packet_type": "person_report",
+				"mac": "5C8AF3000101",
+				"village": 1003012,
+				"lat": 23.661234,
+				"lng": 121.421789,
+				"addr": "MOCK01",
+				"count": 6,
+				"status": "evacuated_shelter",
+				"flags": ["on_site"]
+			},
+			{
+				"packet_type": "resource_report",
+				"mac": "5C8AF3000101",
+				"lat": 23.661234,
+				"lng": 121.421789,
+				"addr": "MOCK01",
+				"resource": ["food_water", "manpower"],
+				"quantity": 8,
+				"duration": 12,
+				"flags": ["is_request", "urgent"]
+			},
+			{
+				"packet_type": "resource_report",
+				"mac": "5C8AF3000101",
+				"lat": 23.661234,
+				"lng": 121.421789,
+				"addr": "MOCK01",
+				"resource": ["shelter_space"],
+				"quantity": 20,
+				"duration": 24,
+				"flags": []
+			}
+		]
+	},
+	{
+		"id": "river-road-overlay-synthetic",
+		"label": "Synthetic 情境二 河道與道路疊合",
+		"description": "以 public reference coordinates 上的 synthetic reports 展示淹水、道路阻斷、撤離至收容點與 hazard overlay 命中。",
+		"source": "Synthetic scenario",
+		"location_policy": "public_reference_coordinates",
+		"occurred_at_utc": "2025-09-23T07:08:00Z",
+		"display_timezone": "Asia/Taipei",
+		"packets": [
+			{
+				"packet_type": "terrain_event",
+				"mac": "5C8AF3000201",
+				"lat": 23.674322,
+				"lng": 121.424416,
+				"event": "drainage_backflow",
+				"extent_m": 220,
+				"severity": 200,
+				"flags": ["rapid_rainfall", "backflow_observed"]
+			},
+			{
+				"packet_type": "terrain_event",
+				"mac": "5C8AF3000201",
+				"lat": 23.641234,
+				"lng": 121.395678,
+				"event": "road_blocked",
+				"extent_m": 35,
+				"severity": 170,
+				"flags": ["only_exit_control"]
+			},
+			{
+				"packet_type": "person_report",
+				"mac": "5C8AF3000201",
+				"village": 1003012,
+				"lat": 23.661234,
+				"lng": 121.421789,
+				"addr": "MOCK01",
+				"count": 14,
+				"status": "evacuated_shelter",
+				"flags": ["on_site"]
+			}
+		]
+	},
+	{
+		"id": "public-facility-resource-synthetic",
+		"label": "Synthetic 情境三 公共設施資源回報",
+		"description": "以 public reference coordinates 上的 synthetic reports 展示資源提供與需求，不標示住戶或個人身分。",
+		"source": "Synthetic scenario",
+		"location_policy": "public_reference_coordinates",
+		"occurred_at_utc": "2025-09-23T08:00:00Z",
+		"display_timezone": "Asia/Taipei",
+		"packets": [
+			{
+				"packet_type": "resource_report",
+				"mac": "5C8AF3000301",
+				"lat": 23.674322,
+				"lng": 121.424416,
+				"addr": "MOCK18",
+				"resource": ["shelter_space", "food_water"],
+				"quantity": 25,
+				"duration": 18,
+				"flags": []
+			},
+			{
+				"packet_type": "person_report",
+				"mac": "5C8AF3000301",
+				"village": 1003012,
+				"lat": 23.661234,
+				"lng": 121.421789,
+				"addr": "MOCK19",
+				"count": 9,
+				"status": "evacuated_shelter",
+				"flags": ["on_site"]
+			},
+			{
+				"packet_type": "resource_report",
+				"mac": "5C8AF3000301",
+				"lat": 23.661234,
+				"lng": 121.421789,
+				"addr": "MOCK19",
+				"resource": ["medical_aid", "manpower"],
+				"quantity": 3,
+				"duration": 8,
+				"flags": ["is_request"]
+			}
+		]
+	},
+	{
+		"id": "event-queue-cluster-synthetic",
+		"label": "Synthetic 情境四 事件群聚與接收端排序",
+		"description": "以 public reference coordinates 上的 synthetic reports 展示近距離同類事件群聚、overlay index 與事件佇列排序。",
+		"source": "Synthetic scenario",
+		"location_policy": "public_reference_coordinates",
+		"occurred_at_utc": "2025-09-23T08:30:00Z",
+		"display_timezone": "Asia/Taipei",
+		"packets": [
+			{
+				"packet_type": "terrain_event",
+				"mac": "5C8AF3000401",
+				"lat": 23.661234,
+				"lng": 121.421789,
+				"event": "flood",
+				"extent_m": 120,
+				"severity": 180,
+				"flags": ["backflow_observed"]
+			},
+			{
+				"packet_type": "terrain_event",
+				"mac": "5C8AF3000401",
+				"lat": 23.661234,
+				"lng": 121.421789,
+				"event": "flood",
+				"extent_m": 90,
+				"severity": 190,
+				"flags": ["backflow_observed"]
+			},
+			{
+				"packet_type": "person_report",
+				"mac": "5C8AF3000401",
+				"village": 1003012,
+				"lat": 23.674322,
+				"lng": 121.424416,
+				"addr": "MOCKNA",
+				"count": 3,
+				"status": "rescue_needed",
+				"flags": ["on_site"]
+			},
+			{
+				"packet_type": "resource_report",
+				"mac": "5C8AF3000401",
+				"lat": 23.674322,
+				"lng": 121.424416,
+				"addr": "MOCK21",
+				"resource": ["vehicle_transport", "manpower"],
+				"quantity": 4,
+				"duration": 3,
+				"flags": ["is_request", "urgent"]
+			}
+		]
+	}
+]

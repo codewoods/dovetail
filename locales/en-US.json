@@ -1,0 +1,100 @@
+{
+	"status": {
+		"unknown": "Unknown",
+		"evacuated_shelter": "Evacuated to shelter",
+		"evacuated_relatives": "Evacuated to relatives",
+		"vertical_evacuated": "Vertical evacuation",
+		"refused": "Refused evacuation",
+		"rescue_needed": "Rescue needed",
+		"self_evacuated_neighbor": "Self-evacuated, neighbor report",
+		"address_lost": "Original address lost"
+	},
+	"person_flag": {
+		"injured": "Injured",
+		"special_needs": "Evacuation support need",
+		"long_term_care": "Long-term care case",
+		"trapped": "Trapped",
+		"non_resident": "Non-resident",
+		"foreign_visitor": "Foreign visitor",
+		"migrant_worker": "Migrant worker",
+		"status_changed": "Status changed",
+		"on_site": "On-site report",
+		"vertical_evacuation": "Vertical evacuation confirmed",
+		"no_fixed_address": "No fixed address",
+		"gnss_degraded": "GNSS degraded",
+		"requires_separated_space": "Separated space needed",
+		"consent_acknowledged": "Consent acknowledged",
+		"consent_refused": "Consent refused"
+	},
+	"terrain_event": {
+		"road_blocked": "Road blocked",
+		"bridge_collapsed": "Bridge collapsed",
+		"landslide": "Landslide",
+		"flood": "Flood",
+		"building_collapse": "Building collapse",
+		"fire": "Fire",
+		"river_diverted": "River diverted",
+		"power_outage_area": "Area power outage",
+		"signal_lost": "Signal lost",
+		"water_color_change": "Water color change",
+		"mountain_rumbling": "Mountain rumbling",
+		"sudden_animal_behavior": "Unusual animal behavior",
+		"ground_cracking": "Ground cracking",
+		"unusual_smell": "Unusual smell",
+		"drainage_backflow": "Drainage backflow"
+	},
+	"terrain_flag": {
+		"rapid_rainfall": "Rapid rainfall",
+		"only_exit_control": "Exit-only road control",
+		"vehicles_trapped": "Vehicles or people temporarily trapped",
+		"backflow_observed": "Backflow observed"
+	},
+	"resource": {
+		"vehicle_transport": "Vehicle transport",
+		"shelter_space": "Shelter space",
+		"power_generator": "Power generator",
+		"medical_aid": "Medical aid",
+		"food_water": "Food and water",
+		"communication": "Communication equipment",
+		"fuel": "Fuel",
+		"manpower": "Manpower",
+		"warmth_supplies": "Warmth supplies",
+		"menstrual_supplies": "Menstrual supplies"
+	},
+	"resource_flag": {
+		"is_request": "Resource request",
+		"urgent": "Urgent"
+	},
+	"queue": {
+		"event_queue": "Event queue",
+		"cluster_count": "Event clusters",
+		"packet_count": "Packet count",
+		"latest_time": "Latest report",
+		"highest_severity": "Highest display weight",
+		"queued": "Review first",
+		"watch": "Watch"
+	},
+	"severity_bands": ["Low", "Medium", "High", "Critical"],
+	"severity_scale": [
+		{
+			"label": "Low",
+			"range": [0, 0],
+			"passability": "No passability impact; signal record only"
+		},
+		{
+			"label": "Medium",
+			"range": [1, 127],
+			"passability": "Civilian vehicles detour; pedestrians / 4WD may evacuate"
+		},
+		{
+			"label": "High",
+			"range": [128, 191],
+			"passability": "Civilian vehicles cannot pass; engineering / 4WD / rescue may enter"
+		},
+		{
+			"label": "Critical",
+			"range": [192, 255],
+			"passability": "Civilian and engineering traffic blocked; rescue access by field judgment"
+		}
+	]
+}

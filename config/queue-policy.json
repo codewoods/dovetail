@@ -1,0 +1,22 @@
+{
+	"priorityOrder": [
+		"person_report:rescue_needed",
+		"person_report:address_lost",
+		"terrain_event:landslide",
+		"terrain_event:drainage_backflow",
+		"terrain_event:flood",
+		"resource_report:request"
+	],
+	"queuedSeverityThreshold": 80,
+	"clusterRadiusDeg": 0.003,
+	"personStatusSeverity": {
+		"unknown": 140,
+		"evacuated_shelter": 60,
+		"evacuated_relatives": 60,
+		"vertical_evacuated": 60,
+		"refused": 140,
+		"rescue_needed": 220,
+		"self_evacuated_neighbor": 60,
+		"address_lost": 220
+	}
+}

@@ -1,0 +1,68 @@
+# ───── Build / runtime caches ─────
+node_modules/
+.bun-tmp/
+.venv/
+firmware/build/
+
+# ───── Editor / OS noise ─────
+.directory
+*.kate-swp
+
+# ───── Agent / tooling workspaces ─────
+# Per-session state, prompts, indexes. Must never enter public snapshots.
+.agents/
+.codex/
+.regent/
+.vale/
+.claude/agents/
+.claude/semgrep-rules/
+.claude/skills/
+.claude/settings.json
+.claude/settings.local.json
+.mcp.json
+AGENTS.md
+
+# ───── Environment / secrets ─────
+.env
+.env.local
+.env.production
+.env.*.local
+.env.runtime.json
+.env.runtime.local.json
+mise.secrets.toml
+mise.local.toml
+.sops.yaml
+
+# ───── Private docs (not for public snapshot) ─────
+docs/maintainer/privacy-release-checklist.md
+docs/public/privacy-assurance.md
+
+# ───── Private data workspaces ─────
+# data/docs and data/processed are derived artifacts; data/raw contains
+# source files that may carry protected addresses or coordinates.
+data/docs/
+data/raw/
+data/processed/
+
+# ───── Local-only API client collections ─────
+api/bruno/
+
+# ───── Local working files ─────
+# temp/ holds pre-redaction document copies and ad-hoc working files.
+# Must never enter snapshots; rebuild from main docs if needed.
+temp/
+
+# ───── Binary archives / spreadsheets / raw GIS ─────
+*.xlsx
+*.xls
+*.pdf
+*.zip
+*.shp
+*.gpkg
+*.pmtiles
+*.geojson
+
+# ───── Repo housekeeping artifacts ─────
+CITATION.cff
+commit-msg.txt
+temp.diff

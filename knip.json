@@ -1,0 +1,29 @@
+{
+	"$schema": "https://unpkg.com/knip@6/schema.json",
+	"entry": [
+		"src/index.ts",
+		"src/server.ts",
+		"src/data/hazard-state.ts",
+		"test/**/*.test.ts",
+		"scripts/*.sh",
+		"scripts/*.mjs",
+		"scripts/*.ts",
+		"*.config.js",
+		"*.config.ts"
+	],
+	"project": ["src/**/*.ts", "test/**/*.ts", "scripts/*", "*.config.*"],
+	"ignoreBinaries": ["make"],
+	"ignoreDependencies": [
+		"@usebruno/cli",
+		"@ls-lint/ls-lint",
+		"browserslist",
+		"browserslist-config-wikimedia"
+	],
+	"ignoreIssues": {
+		"src/analysis/**/*.ts": ["exports", "types"],
+		"src/demo/**/*.ts": ["exports", "types"],
+		"src/geo-math.ts": ["exports"],
+		"src/packet/**/*.ts": ["exports", "types"]
+	},
+	"tags": ["-lintignore"]
+}

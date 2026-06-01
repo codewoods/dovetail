@@ -1,0 +1,12 @@
+*               text eol=lf
+bun.lock        binary
+
+.agents         export-ignore
+.claude         export-ignore
+.codex          export-ignore
+.github         export-ignore
+.gitattributes  export-ignore
+.gitignore      export-ignore
+
+*.enc.yaml            diff=sopsdiffer
+.env.runtime.sops.json diff=sopsdiffer

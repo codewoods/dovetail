@@ -1,0 +1,4 @@
+[allowlist]
+# Sequential hex pattern is the published demo key used in tests and agent templates.
+# Not a real secret — documented in codec.test.ts and docs/submission/spec.md.
+regexes = ['''00112233445566778899aabbccddeeff''']

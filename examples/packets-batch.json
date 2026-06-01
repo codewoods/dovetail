@@ -1,0 +1,62 @@
+[
+	{
+		"type": "person_report",
+		"envelope": {
+			"received_at": "2025-09-28T11:20:10Z",
+			"gateway_id": "MOCK-HUA-GFG-001",
+			"aead_profile": "aead-gcm-128",
+			"chain_mac": "0000000000000000000000000000000000000000000000000000000000000000"
+		},
+		"packet": {
+			"mac": "5C8AF3000001",
+			"village": 1003012,
+			"ts": 1759058400,
+			"lat": 23.661234,
+			"lng": 121.421789,
+			"alt": 130,
+			"addr": "MOCK01",
+			"count": 6,
+			"status": "evacuated_shelter",
+			"flags": ["on_site"]
+		}
+	},
+	{
+		"type": "terrain_event",
+		"envelope": {
+			"received_at": "2025-09-28T11:21:50Z",
+			"gateway_id": "MOCK-HUA-GFG-001",
+			"aead_profile": "aead-gcm-128",
+			"chain_mac": "0000000000000000000000000000000000000000000000000000000000000000"
+		},
+		"packet": {
+			"mac": "5C8AF3000006",
+			"ts": 1759058500,
+			"lat": 23.641234,
+			"lng": 121.395678,
+			"event": "road_blocked",
+			"extent_m": 35,
+			"severity": 170,
+			"flags": ["only_exit_control"]
+		}
+	},
+	{
+		"type": "resource_report",
+		"envelope": {
+			"received_at": "2025-09-28T11:23:30Z",
+			"gateway_id": "MOCK-HUA-GFG-001",
+			"aead_profile": "aead-gcm-128",
+			"chain_mac": "0000000000000000000000000000000000000000000000000000000000000000"
+		},
+		"packet": {
+			"mac": "5C8AF3000007",
+			"ts": 1759058600,
+			"lat": 23.674322,
+			"lng": 121.424416,
+			"addr": "MOCK21",
+			"resource": ["food_water", "manpower"],
+			"quantity": 8,
+			"duration": 12,
+			"flags": ["is_request", "urgent"]
+		}
+	}
+]
